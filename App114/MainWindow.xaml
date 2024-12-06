@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Window x:Class="ColorBrightnessDemoApp.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:helpers="using:ReflectionIT.WinUI.Helpers"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        Title="ColorBrightnessDemoApp"
+        mc:Ignorable="d">
+
+    <StackPanel HorizontalAlignment="Center"
+                VerticalAlignment="Center"
+                Spacing="20">
+
+        <StackPanel Orientation="Horizontal"
+                    Spacing="8">
+            <Rectangle Width="40"
+                       Height="40">
+                <Rectangle.Fill>
+                    <SolidColorBrush helpers:BrushExtensions.ColorCorrectionFactor="-0.4"
+                                     Color="{ThemeResource SystemAccentColor}" />
+                </Rectangle.Fill>
+            </Rectangle>
+            <Rectangle Width="40"
+                       Height="40">
+                <Rectangle.Fill>
+                    <SolidColorBrush helpers:BrushExtensions.ColorCorrectionFactor="-0.2"
+                                     Color="{ThemeResource SystemAccentColor}" />
+                </Rectangle.Fill>
+            </Rectangle>
+            <Rectangle Width="40"
+                       Height="40">
+                <Rectangle.Fill>
+                    <SolidColorBrush Color="{ThemeResource SystemAccentColor}" />
+                </Rectangle.Fill>
+            </Rectangle>
+            <Rectangle Width="40"
+                       Height="40">
+                <Rectangle.Fill>
+                    <SolidColorBrush helpers:BrushExtensions.ColorCorrectionFactor="1.2"
+                                     Color="{ThemeResource SystemAccentColor}" />
+                </Rectangle.Fill>
+            </Rectangle>
+            <Rectangle Width="40"
+                       Height="40">
+                <Rectangle.Fill>
+                    <SolidColorBrush helpers:BrushExtensions.ColorCorrectionFactor="1.4"
+                                     Color="{ThemeResource SystemAccentColor}" />
+                </Rectangle.Fill>
+            </Rectangle>
+        </StackPanel>
+
+        <StackPanel Orientation="Horizontal"
+                    Spacing="8">
+            <Rectangle Width="40"
+                       Height="40">
+                <Rectangle.Fill>
+                    <SolidColorBrush Color="{helpers:ColorBrightness Color={StaticResource SystemAccentColor}, CorrectionFactor=-0.4}" />
+                </Rectangle.Fill>
+            </Rectangle>
+            <Rectangle Width="40"
+                       Height="40">
+                <Rectangle.Fill>
+                    <SolidColorBrush Color="{helpers:ColorBrightness Color={StaticResource SystemAccentColor}, CorrectionFactor=-0.2}" />
+                </Rectangle.Fill>
+            </Rectangle>
+            <Rectangle Width="40"
+                       Height="40">
+                <Rectangle.Fill>
+                    <SolidColorBrush Color="{ThemeResource SystemAccentColor}" />
+                </Rectangle.Fill>
+            </Rectangle>
+            <Rectangle Width="40"
+                       Height="40">
+                <Rectangle.Fill>
+                    <SolidColorBrush Color="{helpers:ColorBrightness Color={StaticResource SystemAccentColor}, CorrectionFactor=1.2}" />
+                </Rectangle.Fill>
+            </Rectangle>
+            <Rectangle Width="40"
+                       Height="40">
+                <Rectangle.Fill>
+                    <SolidColorBrush Color="{helpers:ColorBrightness Color={StaticResource SystemAccentColor}, CorrectionFactor=1.4}" />
+                </Rectangle.Fill>
+            </Rectangle>
+        </StackPanel>
+    </StackPanel>
+</Window>
